@@ -16,3 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test', function () {
+     return 'hello world' ; 
+});
+Route::get('/login', function () {
+     return view('login') ; // rsources/views/login.balde.php 
+});
+Route::get('/test/show', function () {
+     return 'hello world everyone' ; 
+});
+
+Route::get('/posts/create', function () {
+    return view('create');
+});
+Route::post('/posts/save', function () {
+    dd(request()->all()) ;
+});
